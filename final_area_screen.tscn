@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dw85fpxjchkww"]
+
+[ext_resource type="Texture2D" uid="uid://c6sm3ui1jw407" path="res://thx screen.png" id="1_op36t"]
+
+[node name="Control" type="Control" unique_id=1800190281]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=55228625]
+layout_mode = 0
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 858.0
+offset_bottom = 482.0
+texture = ExtResource("1_op36t")

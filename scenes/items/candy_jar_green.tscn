@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://c70jt1iq3g0bt"]
+
+[ext_resource type="Script" uid="uid://uk3vywwpko45" path="res://scripts/items/candy_jar_green.gd" id="1_jfmo8"]
+[ext_resource type="Texture2D" uid="uid://dx3uvcjiullyn" path="res://assets/items/green candy jar.png" id="1_rtsmj"]
+
+[sub_resource type="Gradient" id="Gradient_rpja0"]
+offsets = PackedFloat32Array(0.2957317, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_rpja0"]
+gradient = SubResource("Gradient_rpja0")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.50738007, 0.43357933)
+fill_to = Vector2(0.19283277, 0.8720136)
+metadata/_snap_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s64fb"]
+size = Vector2(9, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmcp4"]
+size = Vector2(15, 32)
+
+[node name="candy_jar_green" type="Area2D" unique_id=1517476316]
+script = ExtResource("1_jfmo8")
+
+[node name="Sprite_Green" type="Sprite2D" parent="." unique_id=685777971]
+position = Vector2(0, 5.61)
+scale = Vector2(0.36827797, 0.35176957)
+texture = ExtResource("1_rtsmj")
+
+[node name="PointLight2D_Green" type="PointLight2D" parent="." unique_id=516390382]
+position = Vector2(7.180587e-08, 7.051683)
+scale = Vector2(0.04190314, 0.030723242)
+color = Color(0, 0.8627451, 0.3529412, 0.99607843)
+energy = 0.55
+shadow_enabled = true
+shadow_color = Color(0.8403417, 0.953363, 0, 0)
+texture = SubResource("GradientTexture2D_rpja0")
+texture_scale = 0.78
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1576568394]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_s64fb")
+
+[node name="Proximity" type="Area2D" parent="." unique_id=532604449]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Proximity" unique_id=22809205]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_gmcp4")
+
+[node name="Indicator" type="Sprite2D" parent="." unique_id=1182686745]
+visible = false

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://hcbokimbueqs"]
+
+[ext_resource type="Texture2D" uid="uid://i0ca2dieqay4" path="res://assets/objects/cama.png" id="1_2pitb"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hp1x5"]
+a = Vector2(-4, -1)
+b = Vector2(5, -1)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=1071922323]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1746095820]
+position = Vector2(0, -1)
+scale = Vector2(0.55, 0.55)
+texture = ExtResource("1_2pitb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1266959565]
+shape = SubResource("SegmentShape2D_hp1x5")

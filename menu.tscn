@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ym5br8beitfx"]
+
+[ext_resource type="Script" uid="uid://dpc30huunvphs" path="res://menu.gd" id="1_lti8b"]
+[ext_resource type="Texture2D" uid="uid://dttfto35qg14v" path="res://assets/map/start screen.png" id="2_ouk20"]
+
+[node name="Menu" type="Node2D" unique_id=1460936023]
+script = ExtResource("1_lti8b")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1719888750]
+texture = ExtResource("2_ouk20")

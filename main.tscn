@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://deotlyst3v2p8"]
+
+[ext_resource type="PackedScene" uid="uid://c61sxtsyiucqv" path="res://boot.tscn" id="1_h2yge"]
+[ext_resource type="PackedScene" uid="uid://btax88j4quxjr" path="res://hospital.tscn" id="2_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dcpk5qcdxefe1" path="res://final_area.tscn" id="3_lquwl"]
+
+[node name="main" type="Node2D" unique_id=674756137]
+
+[node name="boot" parent="." unique_id=1025550316 instance=ExtResource("1_h2yge")]
+
+[node name="hospital" parent="." unique_id=1832836861 instance=ExtResource("2_1bvp3")]
+
+[node name="FinalArea" parent="." unique_id=1911622395 instance=ExtResource("3_lquwl")]
+position = Vector2(-427, -240)

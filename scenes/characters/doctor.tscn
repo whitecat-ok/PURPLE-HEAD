@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://be8uky1kpw010"]
+
+[ext_resource type="Script" uid="uid://4b80xf3o3acm" path="res://scenes/characters/doctor.gd" id="1_txd7q"]
+[ext_resource type="Texture2D" uid="uid://bx0m25obldo3d" path="res://assets/characters/doc.png" id="2_iv1hu"]
+[ext_resource type="Texture2D" uid="uid://er3cg1htgkvw" path="res://assets/ui/left mouse.png" id="3_1q5ai"]
+[ext_resource type="PackedScene" uid="uid://bdqvgcai68n4x" path="res://scenes/enviroment/hospital lamp.tscn" id="4_iv1hu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3330f"]
+atlas = ExtResource("2_iv1hu")
+region = Rect2(0, 0, 4, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwkmr"]
+atlas = ExtResource("2_iv1hu")
+region = Rect2(0, 0, 4, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t7di7"]
+atlas = ExtResource("2_iv1hu")
+region = Rect2(4, 0, 4, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hp1x5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3330f")
+}],
+"loop": 1,
+"name": &"still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bwkmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t7di7")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7su5"]
+size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icr2n"]
+size = Vector2(20, 8)
+
+[node name="doctor" type="CharacterBody2D" unique_id=1679172213]
+script = ExtResource("1_txd7q")
+interaction_enabled = null
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=895223819]
+sprite_frames = SubResource("SpriteFrames_hp1x5")
+animation = &"talking"
+frame_progress = 0.83786106
+
+[node name="interaction" type="Area2D" parent="." unique_id=39448301]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interaction" unique_id=1779901365]
+shape = SubResource("RectangleShape2D_d7su5")
+
+[node name="proximity" type="Area2D" parent="." unique_id=1684746537]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="proximity" unique_id=2095802228]
+shape = SubResource("RectangleShape2D_icr2n")
+
+[node name="indicator" type="Sprite2D" parent="." unique_id=1104759243]
+visible = false
+position = Vector2(-6.0000005, -3)
+scale = Vector2(0.15625, 0.125)
+texture = ExtResource("3_1q5ai")
+
+[node name="hospital lamp15" parent="indicator" unique_id=608590180 instance=ExtResource("4_iv1hu")]
+position = Vector2(936, 30)

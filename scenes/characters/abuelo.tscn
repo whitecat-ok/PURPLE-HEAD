@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://df8oh43xjo3mm"]
+
+[ext_resource type="Texture2D" uid="uid://eyil2ph4r3ck" path="res://assets/characters/abuelo sprite.png" id="1_0wvl8"]
+[ext_resource type="Script" uid="uid://c0fy71boa08dc" path="res://scenes/characters/abuelo.gd" id="1_q7y6k"]
+[ext_resource type="Texture2D" uid="uid://er3cg1htgkvw" path="res://assets/ui/left mouse.png" id="3_8eucd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_af13l"]
+atlas = ExtResource("1_0wvl8")
+region = Rect2(0, 0, 4, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8eucd"]
+atlas = ExtResource("1_0wvl8")
+region = Rect2(0, 0, 4, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wefwg"]
+atlas = ExtResource("1_0wvl8")
+region = Rect2(4, 0, 4, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jy580"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_af13l")
+}],
+"loop": 1,
+"name": &"still",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8eucd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wefwg")
+}],
+"loop": 1,
+"name": &"talking",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d7su5"]
+size = Vector2(20, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_icr2n"]
+size = Vector2(20, 8)
+
+[node name="abuelo" type="CharacterBody2D" unique_id=1679172213]
+script = ExtResource("1_q7y6k")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1206034420]
+position = Vector2(-9, 0)
+sprite_frames = SubResource("SpriteFrames_jy580")
+animation = &"still"
+
+[node name="interaction" type="Area2D" parent="." unique_id=39448301]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interaction" unique_id=1779901365]
+position = Vector2(-8, 0)
+shape = SubResource("RectangleShape2D_d7su5")
+
+[node name="proximity" type="Area2D" parent="." unique_id=1684746537]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="proximity" unique_id=2095802228]
+position = Vector2(-8, 0)
+shape = SubResource("RectangleShape2D_icr2n")
+
+[node name="indicator" type="Sprite2D" parent="." unique_id=1104759243]
+position = Vector2(-6.0000005, -3)
+scale = Vector2(0.15625, 0.125)
+texture = ExtResource("3_8eucd")

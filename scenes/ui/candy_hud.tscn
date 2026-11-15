@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dsp66gvylqyuu"]
+
+[ext_resource type="Script" uid="uid://cmguutrhxxh5i" path="res://scripts/ui/candy_hud.gd" id="1_vqtt7"]
+
+[node name="CandyHUD" type="CanvasLayer" unique_id=1012370652]
+layer = 10
+script = ExtResource("1_vqtt7")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1632312688]
+custom_minimum_size = Vector2(70, 8)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -59.0
+offset_bottom = 71.0
+grow_horizontal = 0
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=1453490543]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1329721047]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/PanelContainer" unique_id=261855701]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/PanelContainer/VBoxContainer" unique_id=442004581]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/PanelContainer/VBoxContainer" unique_id=1865136125]
+visible = false
+custom_minimum_size = Vector2(44, 2)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="PanelContainer2" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=1830906764]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/PanelContainer2" unique_id=679182398]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/PanelContainer2/VBoxContainer" unique_id=1757466855]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/PanelContainer2/VBoxContainer" unique_id=1793914437]
+visible = false
+custom_minimum_size = Vector2(44, 2)
+layout_mode = 2
+value = 100.0
+show_percentage = false
+
+[node name="PanelContainer3" type="PanelContainer" parent="MarginContainer/HBoxContainer" unique_id=33238571]
+custom_minimum_size = Vector2(44, 44)
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer/PanelContainer3" unique_id=1840333127]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/HBoxContainer/PanelContainer3/VBoxContainer" unique_id=1877251018]
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer/HBoxContainer/PanelContainer3/VBoxContainer" unique_id=1942284059]
+visible = false
+custom_minimum_size = Vector2(44, 2)
+layout_mode = 2
+value = 100.0
+show_percentage = false

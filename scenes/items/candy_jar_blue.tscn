@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://oam4vqtt2rxn"]
+
+[ext_resource type="Script" uid="uid://dlc3vn62xcmbp" path="res://scripts/items/candy_jar_blue.gd" id="1_5woij"]
+[ext_resource type="Texture2D" uid="uid://ccqhvxnp1sjsr" path="res://assets/items/blue candy jar.png" id="2_5woij"]
+
+[sub_resource type="Gradient" id="Gradient_jfmo8"]
+offsets = PackedFloat32Array(0.2957317, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5woij"]
+gradient = SubResource("Gradient_jfmo8")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.50738007, 0.43357933)
+fill_to = Vector2(0.19283277, 0.8720136)
+metadata/_snap_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xhfai"]
+size = Vector2(9, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d3i71"]
+size = Vector2(15, 32)
+
+[node name="candy_jar_blue" type="Area2D" unique_id=318831508]
+script = ExtResource("1_5woij")
+
+[node name="Sprite_Blue" type="Sprite2D" parent="." unique_id=458826056]
+position = Vector2(0, 5.61)
+scale = Vector2(0.36827797, 0.35176957)
+texture = ExtResource("2_5woij")
+
+[node name="PointLight2D_Blue" type="PointLight2D" parent="." unique_id=809886427]
+position = Vector2(7.180587e-08, 7.051683)
+scale = Vector2(0.04190314, 0.030723242)
+color = Color(0, 0.8627451, 1, 0.99607843)
+energy = 0.55
+shadow_enabled = true
+shadow_color = Color(0.8403417, 0.953363, 0, 0)
+texture = SubResource("GradientTexture2D_5woij")
+texture_scale = 0.78
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1992461656]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_xhfai")
+
+[node name="Proximity" type="Area2D" parent="." unique_id=913260421]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Proximity" unique_id=1793521511]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_d3i71")
+
+[node name="Indicator" type="Sprite2D" parent="." unique_id=2053278752]
+visible = false

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dixyxm02aels"]
+
+[ext_resource type="Script" uid="uid://cpddl35c1mobn" path="res://scenes/ui/blue_crack.gd" id="1_pr1j6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hp1x5"]
+size = Vector2(16, 17)
+
+[node name="BlueCrack" type="Area2D" unique_id=2039558819]
+script = ExtResource("1_pr1j6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1088690125]
+shape = SubResource("RectangleShape2D_hp1x5")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=793378730]

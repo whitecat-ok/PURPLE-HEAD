@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dskus4r3k56vx"]
+
+[ext_resource type="Script" uid="uid://dk3rgmk418w6" path="res://scripts/cinematic/dialoge_manager.gd" id="1_hfl46"]
+
+[node name="DialogueManager" type="CanvasLayer" unique_id=120670002]
+script = ExtResource("1_hfl46")
+dialogue_lines = Array[String](["otra vez lo mismo...", "cuántas veces vamos a tener que pasar por esto?", "me he dado cuenta que no puedo confiar en ti", "..."])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=357239798]
+offset_right = 260.0
+offset_bottom = 40.0
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1185865395]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer" unique_id=224040251]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3

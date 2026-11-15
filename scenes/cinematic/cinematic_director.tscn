@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://bkq7govi2wk6b"]
+
+[ext_resource type="Script" uid="uid://bkodrdkfyc1q" path="res://scripts/cinematic/cinematic_director.gd" id="1_knmts"]
+
+[node name="cinematic_director" type="Node" unique_id=1573985695]
+script = ExtResource("1_knmts")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1384468664]
+
+[node name="TopMate" type="ColorRect" parent="CanvasLayer" unique_id=256657919]
+visible = false
+z_index = 100
+offset_left = -34.0
+offset_top = -48.0
+offset_right = 894.0
+offset_bottom = 109.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ButtonMate" type="ColorRect" parent="CanvasLayer" unique_id=1788382454]
+visible = false
+z_index = 100
+offset_left = -34.0
+offset_top = 365.0
+offset_right = 892.0
+offset_bottom = 524.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

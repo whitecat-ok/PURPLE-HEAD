@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cjlwhdsasq5b8"]
+
+[ext_resource type="Script" uid="uid://bed4e8wm1yhgw" path="res://scripts/items/candy_jar.gd" id="1_hyn11"]
+[ext_resource type="Texture2D" uid="uid://dfydsrohfe2ki" path="res://assets/items/yellow candy jar.png" id="2_os706"]
+
+[sub_resource type="Gradient" id="Gradient_jaenq"]
+offsets = PackedFloat32Array(0.2957317, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_yxadp"]
+gradient = SubResource("Gradient_jaenq")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.50738007, 0.43357933)
+fill_to = Vector2(0.19283277, 0.8720136)
+metadata/_snap_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jy580"]
+size = Vector2(9, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hp1x5"]
+size = Vector2(15, 32)
+
+[node name="candy_jar" type="Area2D" unique_id=795152711]
+script = ExtResource("1_hyn11")
+
+[node name="Sprite_Yellow" type="Sprite2D" parent="." unique_id=1878135954]
+position = Vector2(0, 5.61)
+scale = Vector2(0.36827797, 0.35176957)
+texture = ExtResource("2_os706")
+
+[node name="PointLight2D_Yellow" type="PointLight2D" parent="." unique_id=1912652058]
+position = Vector2(7.180587e-08, 7.051683)
+scale = Vector2(0.04190314, 0.030723242)
+color = Color(1, 0.8627451, 0.3529412, 0.99607843)
+energy = 0.55
+shadow_enabled = true
+shadow_color = Color(0.8403417, 0.953363, 0, 0)
+texture = SubResource("GradientTexture2D_yxadp")
+texture_scale = 0.78
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=850575529]
+position = Vector2(0, 9)
+shape = SubResource("RectangleShape2D_jy580")
+
+[node name="Proximity" type="Area2D" parent="." unique_id=526571002]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Proximity" unique_id=710124392]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_hp1x5")
+
+[node name="Indicator" type="Sprite2D" parent="." unique_id=1491350154]
+visible = false

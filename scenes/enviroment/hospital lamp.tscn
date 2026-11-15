@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bdqvgcai68n4x"]
+
+[sub_resource type="Gradient" id="Gradient_j1kyv"]
+offsets = PackedFloat32Array(0.2957317, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_hp1x5"]
+gradient = SubResource("Gradient_j1kyv")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.50738007, 0.43357933)
+fill_to = Vector2(0.19283277, 0.8720136)
+metadata/_snap_count = 2
+
+[node name="hospital lamp" type="Node2D" unique_id=608590180]
+
+[node name="PointLight2D5" type="PointLight2D" parent="." unique_id=484681231]
+position = Vector2(0.54529, -0.4981995)
+scale = Vector2(0.014570422, 0.0050260383)
+color = Color(0.97383076, 0.53136975, 0.8777735, 1)
+energy = 0.89
+shadow_enabled = true
+shadow_color = Color(0.8403417, 0.953363, 0, 0)
+texture = SubResource("GradientTexture2D_hp1x5")
+texture_scale = 0.78
+
+[node name="PointLight2D3" type="PointLight2D" parent="." unique_id=643061551]
+position = Vector2(0, 10.000001)
+scale = Vector2(0.31320307, 0.116598815)
+energy = 0.55
+shadow_enabled = true
+shadow_color = Color(0.8403417, 0.953363, 0, 0)
+texture = SubResource("GradientTexture2D_hp1x5")
+texture_scale = 0.78
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=1960939926]
+position = Vector2(5.9604645e-08, 45.000004)
+scale = Vector2(0.5596455, 0.45072114)
+energy = 0.55
+shadow_enabled = true
+shadow_color = Color(0.8403417, 0.953363, 0, 0)
+texture = SubResource("GradientTexture2D_hp1x5")
+texture_scale = 0.78
